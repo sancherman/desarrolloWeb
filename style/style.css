@@ -1,0 +1,337 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+Colores de la web
+#005f65
+white
+#6c757d
+#cc2c20
+*/
+/*Movile*/
+body{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    display: flex;
+    justify-content: center;
+}
+nav ul li{
+    list-style-type: none;
+    text-decoration: none;
+    margin: 5px 0px 5px 0px;
+}
+a{
+    font-size: xx-large;
+    color: white;
+    text-decoration: none;
+}
+nav ul > li a:hover {
+    background: #6c757d;
+}
+footer{
+    background-image: url(../image/fondoFooter.jpg);
+}
+footer section{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*Declaracion de area-Primer medida*/
+header{
+    grid-area: logo;
+}
+nav{
+    grid-area: nav;
+}
+.slider{
+    grid-area: slider;
+}
+.contenido{
+    grid-area: contenido;
+}
+.iframeIndex{
+    grid-area: iframeIndex;
+}
+footer{
+    grid-area: footer;
+}
+.grillaGeneral{
+    background-color: #005f65;
+    display: grid;
+    grid-template-areas: 
+    "logo"
+    "nav"
+    "slider"
+    "contenido"
+    "iframeIndex"
+    "footer";
+}
+.slider{
+        display: flex;
+    background-color: #cc2c20;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: initial;
+    height: 100px;
+    align-items: center;
+    
+}
+.contenido section{
+    display: flex;
+    border-top: 5px solid #005f65;
+    border-left: 1px solid #6c757d4f;
+    border-right: 1px solid #6c757d4f;
+    border-bottom: 1px solid #6c757d4f;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+}
+.contenido section h2{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: large;
+    color: #005f65;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+.contenido section p{
+    margin-bottom: 30px;
+    padding: 20px;
+    font-weight: bold;
+    color: #9b9b9b;
+}
+.iframeIndex{
+    height: 225px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.productos img{
+    height: 300px;
+    width: 300px;
+}
+.productos section h3{
+    text-align: center;
+    background-color: #005f65;
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    list-style-type: none;
+    font-size: large;
+}
+.productos section h3:hover{
+    background-color: #6c757d;
+}
+@media (min-width:500px){
+    .grillaGeneral{
+        grid-template-areas: 
+        "logo nav"
+        "slider slider"
+        "iframeIndex iframeIndex"
+        "footer footer";
+    }
+    main article section img{
+        height: 100px;
+        width: 100px;
+    }
+    a{
+        font-size: x-large;
+    }
+    .slider{
+    font-weight: normal;
+    font-size:x-small;
+    height: 50px;
+    align-items: center;
+}
+footer section h2{
+    color: #cc2c20;
+}
+.madeBy{
+    color:#005f65;
+}
+.iframeIndex{
+    height: 320px;
+    width: 500px;
+}
+}
+@media (min-width:768px){
+    .grillaGeneral{
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas: 
+        "logo nav nav"
+        "slider slider slider"
+        "contenido contenido contenido"
+        "iframeIndex iframeIndex iframeIndex"
+        "footer footer footer";
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    a{
+        font-size: x-large;
+    }
+    .slider{
+        justify-content: flex-end;
+    }
+    .padre{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 30px 10px 30px 10px;
+    }
+    .padre section{
+        display: flex;
+    }
+    .productos img{
+        height: 200px;
+        width: 200px;
+    }
+    .padreProductos{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 30px 10px 30px 10px;
+    }
+    main article section img{
+        height: 100px;
+        width: 100px;
+    }
+    .iframeIndex{
+        height: 434px;
+        width: 768px;
+    }
+}
+@media (min-width:1024px){
+    .grillaGeneral{
+        grid-template-columns: 3fr 3fr 2fr;
+        grid-template-areas: 
+        "logo nav nav"
+        "slider slider slider"
+        "contenido contenido contenido"
+        "iframeIndex iframeIndex iframeIndex"
+        "footer footer footer";
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        list-style-type: none;
+        justify-content: center;
+    
+    }
+    a{
+        font-size: larger;
+        margin: 10px;
+    }
+    .slider{
+        background-image: url("../image/sliderElectricas.jpg");
+        width: 100%;
+        height: 568px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        
+    }
+    .slider h1{
+        display: flex;
+        background-color: #cc2c20;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: normal;
+        font-style: italic;
+        font-size:x-large;
+        height: 60px;
+        align-items: center;
+        padding-right: 350px;
+        margin-top: 230px;
+    }
+    .productos img{
+        height: 200px;
+        width: 200px;
+    }
+    .padreProductos{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .iframeIndex{
+        height: 575px;
+        width: 1024px;
+    }
+    .padreFooter{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+/*Footer*/
+/*
+footer{
+    background-image: url(../image/fondoFooter.jpg);
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 100px;
+    padding-top: 50px;
+}
+footer h2{
+    font-family: Roboto;
+    font-weight:bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+footer h3{
+    font-weight: bold;
+}
+footer h4{
+    font-weight: 300;
+}
+.fc-ddc div{
+    display: flex;
+}
+.fc-ddc div section h3{
+    margin-right: 10px;
+}
+.fc-ddc div section h4{
+    margin-top: 3px;
+}
+.fc-selr div{
+    display: flex;
+}
+.icon{
+    width: 48px;
+    height: 48px;
+}
+.button-enviar{
+    background-color:#005f65;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+}
+.button-enviar:hover{
+    background-color: #6c757d;
+}
+.madeBy h3{
+    text-align: center;
+    margin-top: 100px;
+    color: #6c757d;
+}
+*/
+/*FIN Footer*/
