@@ -23,6 +23,9 @@ header{
     justify-content: center;
     align-items: center;
 }
+.logo:hover{
+    transform: scale(1.5);
+}
 nav{
     display: flex;
     justify-content: center;
